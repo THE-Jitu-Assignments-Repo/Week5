@@ -1,7 +1,6 @@
 import React from "react";
 
-function ProductCard({handleDelete, filteredData}) {
-
+function ProductCard({ handleDelete, filteredData }) {
   return (
     <>
       {filteredData?.map((product) => {
@@ -23,13 +22,13 @@ function ProductCard({handleDelete, filteredData}) {
             </div>
 
             <div className="product--rates">
+              <div className="price">
+                <span>Price: Ksh.{product?.price}</span>
+              </div>{" "}
               <div className="ratings">
                 {/* <ReactStars /> */}
                 <span>Ratings: {product.rating?.rate} </span>
               </div>
-              <div className="price">
-                <span>Price: {product?.price} Ksh.</span>
-              </div>{" "}
               <button
                 onClick={() => handleDelete(product.id)}
                 className="Delete"

@@ -1,7 +1,9 @@
 .product--card--main {
   overflow-y: scroll;
   /* background-color: red; */
-  max-height: 100vh;
+  max-height: calc(100vh - 140px);
+  margin-bottom: 20px;
+  padding-bottom: 40px;
 }
 
 .product--card {
@@ -25,6 +27,7 @@
   padding: 5px;
   margin-top: 1em;
   max-width: 50%;
+  flex: 1;
   /* border: 2px solid red; */
 }
 .product--details h4 {
@@ -41,6 +44,7 @@
   align-items: center;
   justify-content: space-evenly;
   margin: 1em;
+  padding-left: 20px;
   /* border: 2px solid red; */
 }
 

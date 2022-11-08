@@ -7,9 +7,16 @@ import NewProduct from "../Products/NewProduct";
 import { useEffect } from "react";
 import useFetch from "../hooks/useFetch";
 import { toast } from 'react-toastify'
+import axios from "axios";
 
 const AddProducts = () => {
-
+  // const [newProduct, setNewProduct] = useState({
+  //   title: "",
+  //   category: "",
+  //   description: "",
+  //   image: "",
+  //   price: "",
+  // });
 
    const [ data, setData ] = useFetch("https://fakestoreapi.com/products/");
 
@@ -31,13 +38,7 @@ const AddProducts = () => {
   };
 
   const [limit, setLimit] = useState(0);
-  // console.log(limit)
-  // const [ data, setData ] = useFetch(
-  //   `https://fakestoreapi.com/products/`
-  // );
-
-  // const [selectedCategory] = useContext(CategoryContext);
-  // console.log(selectedCategory);
+  
   const [modal, setModal] = useState(false);
 
   const sliceData = () => {
@@ -67,6 +68,19 @@ const AddProducts = () => {
   }, [limit])
 
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+
+  //   const res = await axios.post("https://fakestoreapi.com/products", newProduct);
+  //   setModal(false)
+    
+  //   setData([...data, res.data])
+  // };
+
+
+
+
+
   return (
     <div>
       <div className="product--name">
@@ -78,7 +92,7 @@ const AddProducts = () => {
           )}
         </div>
         <div className="product--settings">
-          {modal && <NewProduct setModal={setModal} />}
+          {modal && <NewProduct setModal={setModal} data={data} setData={setData}/>}
           <button className="add--product" onClick={() => setModal(!modal)}>
             <FaPlus /> Add Product
           </button>
