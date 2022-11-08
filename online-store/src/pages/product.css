@@ -1,0 +1,95 @@
+.product--card--main {
+  overflow-y: scroll;
+  /* background-color: red; */
+  max-height: 100vh;
+}
+
+.product--card {
+  /* border: 2px solid red; */
+  padding: 0px;
+  max-width: 100% fit-content;
+  display: flex;
+  gap: 10px;
+  /* justify-content: space-between; */
+  border-top: 1px solid rgb(33 37 41 / 10%);
+  flex: 1;
+}
+
+.product--image {
+  padding: 40px;
+}
+.product--details {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 5px;
+  margin-top: 1em;
+  max-width: 50%;
+  /* border: 2px solid red; */
+}
+.product--details h4 {
+  margin: 2px;
+}
+.product--details span {
+  font-weight: 400;
+  padding: 2px;
+}
+
+.product--rates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 1em;
+  /* border: 2px solid red; */
+}
+
+.product--name {
+  /* border: 2px solid red; */
+  margin-top: 20px;
+  max-width: 100%;
+  height: 90px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.product--settings {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sort--product {
+  display: flex;
+  gap: 20px;
+}
+
+.add--product {
+  padding: 8px;
+  border-radius: 5px;
+  color: #fff;
+  display: flex;
+  border: none;
+  gap: 5px;
+  align-items: center;
+  background-color: rgb(18, 67, 110);
+  cursor: pointer;
+}
+
+.add--product:hover {
+  background-color: rgb(118, 148, 175);
+}
+
+.Delete {
+  padding: 6px;
+  border-radius: 5px;
+  color: #fff;
+  display: flex;
+  border: none;
+  gap: 5px;
+  align-items: center;
+  background-color: rgb(18, 67, 110);
+  cursor: pointer;
+}
