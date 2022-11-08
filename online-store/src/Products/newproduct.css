@@ -59,3 +59,10 @@
 .btn button:hover{
     background-color: #88a2c0;
 }
+
+.head--modal{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}

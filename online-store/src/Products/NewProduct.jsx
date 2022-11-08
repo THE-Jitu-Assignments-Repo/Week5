@@ -17,9 +17,8 @@ function NewProduct({ setModal, data, setData }) {
   const handleChange = (e) => {
     setNewProduct((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value
-    }))
-
+      [e.target.name]: e.target.value,
+    }));
   };
 
   console.log(newProduct);
@@ -27,12 +26,15 @@ function NewProduct({ setModal, data, setData }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await axios.post("https://fakestoreapi.com/products", newProduct);
-    setModal(false)
-    
-    setData([res.data, ...data])
+    const res = await axios.post(
+      "https://fakestoreapi.com/products",
+      newProduct
+    );
+    setModal(false);
 
-    toast.success("New Product Added Successfully!")
+    setData([res.data, ...data]);
+
+    toast.success("New Product Added Successfully!");
   };
 
   console.log(data);
@@ -41,18 +43,9 @@ function NewProduct({ setModal, data, setData }) {
     <div className="modal">
       <div className="modal--container">
         <form className="modal-form" onSubmit={handleSubmit}>
-          <p>
-            <FaClipboardCheck /> ADD A NEW PRODUCT
-          </p>
-          <label htmlFor="image">Image</label>
-
-          <input
-            type="text"
-            name="image"
-            placeholder="Enter the product url..."
-            value={newProduct.image}
-            onChange={handleChange}
-          />
+          <p className="head--modal">
+            <FaClipboardCheck /> <span>ADD A NEW PRODUCT</span>
+          </p>{" "}
           <label htmlFor="title">Title</label>
           <input
             type="text"
@@ -62,17 +55,33 @@ function NewProduct({ setModal, data, setData }) {
             value={newProduct.title}
             onChange={handleChange}
           />
-          <label htmlFor="category">Category</label>
-
+          <label htmlFor="image">Image</label>
           <input
+            type="text"
+            name="image"
+            placeholder="Enter the product url..."
+            value={newProduct.image}
+            onChange={handleChange}
+          />
+          <label htmlFor="category">Category</label>
+          <select
+            name="category"
+            value={newProduct.category}
+            onChange={handleChange}
+          >
+            <option value="electronics">electronics</option>
+            <option value="jewelery">jewelery</option>
+            <option value="men's clothing">men's clothing</option>
+            <option value="women's clothing">women's clothing</option>
+          </select>
+          {/* <input
             type="text"
             name="category"
             placeholder="Enter the Category..."
             value={newProduct.category}
             onChange={handleChange}
-          />
+          /> */}
           <label htmlFor="price">Price</label>
-
           <input
             type="number"
             name="price"

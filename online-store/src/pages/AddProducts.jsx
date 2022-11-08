@@ -67,14 +67,6 @@ const AddProducts = () => {
     }
   };
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-
-  //   const res = await axios.post("https://fakestoreapi.com/products", newProduct);
-  //   setModal(false)
-
-  //   setData([...data, res.data])
-  // };
 
   return (
     <div>
