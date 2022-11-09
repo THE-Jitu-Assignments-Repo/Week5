@@ -33,22 +33,17 @@ const AddProducts = () => {
   const [modal, setModal] = useState(false);
 
   const sliceData = () => {
-    console.log("is it working");
     if (+limit === 5) {
-      console.log("first", limit);
       setData(data?.slice(0, limit));
-      console.log("mi", data);
     } else if (+limit === 10) {
       console.log("tens", limit);
       setData(data?.slice(0, limit));
-      console.log("ni", data);
     } else {
       return setData(data);
     }
   };
 
   const handleLimit = (e) => {
-    console.log(e.target.value);
     setLimit(e.target.value);
   };
 
@@ -59,14 +54,11 @@ const AddProducts = () => {
   const handleSort = (e) => {
     let order = e.target.value;
     if (order === "Desc") {
-      console.log(order);
       setData(descend);
     } else if (order === "Asc") {
-      console.log(order);
       setData(ascend);
     }
   };
-
 
   return (
     <div>

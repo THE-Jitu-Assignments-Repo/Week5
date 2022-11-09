@@ -54,6 +54,7 @@ function NewProduct({ setModal, data, setData }) {
             autoFocus
             value={newProduct.title}
             onChange={handleChange}
+            required
           />
           <label htmlFor="image">Image</label>
           <input
@@ -62,25 +63,20 @@ function NewProduct({ setModal, data, setData }) {
             placeholder="Enter the product url..."
             value={newProduct.image}
             onChange={handleChange}
+            required
           />
           <label htmlFor="category">Category</label>
           <select
             name="category"
             value={newProduct.category}
             onChange={handleChange}
+            required
           >
-            <option value="electronics">electronics</option>
-            <option value="jewelery">jewelery</option>
             <option value="men's clothing">men's clothing</option>
             <option value="women's clothing">women's clothing</option>
+            <option value="electronics">electronics</option>
+            <option value="jewelery">jewelery</option>
           </select>
-          {/* <input
-            type="text"
-            name="category"
-            placeholder="Enter the Category..."
-            value={newProduct.category}
-            onChange={handleChange}
-          /> */}
           <label htmlFor="price">Price</label>
           <input
             type="number"
@@ -88,6 +84,7 @@ function NewProduct({ setModal, data, setData }) {
             placeholder="Enter the Price..."
             value={newProduct.price}
             onChange={handleChange}
+            required
           />
           <label htmlFor="description">Description</label>
           <textarea
@@ -97,6 +94,7 @@ function NewProduct({ setModal, data, setData }) {
             rows="5"
             value={newProduct.description}
             onChange={handleChange}
+            required
           ></textarea>
           <div className="btn">
             <button type="submit">
