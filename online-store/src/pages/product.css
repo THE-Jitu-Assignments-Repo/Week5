@@ -97,3 +97,26 @@
   background-color: rgb(18, 67, 110);
   cursor: pointer;
 }
+
+.title{
+  font-size: large;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.category--name{
+  opacity: 80%;
+  background: rgb(18, 67, 110);
+  border-radius: 5px;
+  color: #fff;
+  margin: 2px;
+  text-transform: capitalize;
+}
+
+.description-tag{
+  font-family: sans-serif;
+}
+
+
+
+

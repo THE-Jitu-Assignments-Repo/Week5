@@ -58,7 +58,7 @@ function NewProduct({ setModal, data, setData }) {
           />
           <label htmlFor="image">Image</label>
           <input
-            type="text"
+            type="url"
             name="image"
             placeholder="Enter the product url..."
             value={newProduct.image}

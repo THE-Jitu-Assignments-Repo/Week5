@@ -11,13 +11,13 @@ function ProductCard({ handleDelete, filteredData }) {
             </div>
             <div className="product--details">
               <h4>
-                Title: <span>{product?.title}</span>
+                <span className="title">{product?.title}</span>
               </h4>
               <h4>
-                Category: <span>{product?.category}</span>
+               <span className="category--name">{product?.category}</span>
               </h4>
               <h4>
-                Description: <span>{product?.description}</span>
+                Description: <span className="description--tag">{product?.description}</span>
               </h4>
             </div>
 
